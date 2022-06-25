@@ -1,0 +1,96 @@
+.clock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  --hours-color: yellow;
+  --minutes-color: darkblue;
+  --seconds-color: teal;
+}
+
+.dot {
+  height: 40px;
+  width: 40px;
+  flex-direction: row;
+  justify-content: flex-end;
+  border-radius: 50%;
+  border: 3px solid;
+  margin: 5px;
+}
+
+.dot-inner-on{
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.dot-inner-off-left{
+  position: relative;
+  height: 0;
+  width: 0;
+  border-radius: 50%;
+  left: -20px;
+  top: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dot-inner-off-right{
+  position: relative;
+  height: 0;
+  width: 0;
+  border-radius: 50%;
+  left: 20px;
+  top: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dot-inner-off-down{
+  position: relative;
+  height: 0;
+  width: 0;
+  border-radius: 50%;
+  top: 40px;
+  left: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+#hours .dot {
+  border-color: var(--hours-color);
+}
+
+#hours .dot-inner-on {
+  background-color: var(--hours-color);
+}
+
+
+
+#minutes .dot {
+  border-color: var(--minutes-color);
+}
+
+#minutes .dot-inner-on {
+  background-color: var(--minutes-color);
+}
+
+#seconds .dot {
+  border-color: var(--seconds-color);
+}
+
+#seconds .dot-inner-on {
+  background-color: var(--seconds-color);
+}
